@@ -1,20 +1,18 @@
 <!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href={{ url_for('static', filename='css/bootstrap.min.css') }} integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <title>Dados Geração de Energia</title>
-<style>
-	.dados {
-		text-align: left;
-		margin-bottom: 15px;
-		display: block;
-	}
-</style>
-<body>
+
 {% if infos %}
   {% for info in infos %}
-  <div class='dados'>
-  	{{info}}
+  <div class='jumbotron'>
+  	<h2>{{ info.nomeDist }}</h2>
+    <p>Pontencia: {{ info.potenciaInstalada }}</p>
+    <p>Data referencia: {{ info.dataRef }}</p>
+    <p>Data de processamento: {{ info.dateTime }}</p>
   </div>
   {% endfor %}
 {% else %}
-  <h1>Não foi possível buscar informações</h1>
+  <div class="alert alert-warning">Não foi possível buscar informações</div>
 {% endif %}
-</body>
