@@ -1,0 +1,24 @@
+#header > hr {
+	margin-top: 30px;
+}
+
+#logo {
+	width: 72px;
+	height: 72px;
+	float: left;
+	margin-left: 15px;
+	margin-top: -10px; 
+}
+
+#titulo {
+	text-align: center;
+	margin-top: 45px;
+}
+
+#search-bar-div {
+	margin-bottom: 20px;
+}
+
+#footer > p {
+	text-align: right;
+}
